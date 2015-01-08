@@ -5,4 +5,9 @@
 %br
 
 - @article.each do |r|
-	= link_to r.title, r
+	%h2= link_to r.title, r
+	%p
+		Published
+		= time_ago_in_words(r.created_at())
+		Ago
+	%p= truncate(r.content, length: 200)
