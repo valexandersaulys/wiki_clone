@@ -1,6 +1,9 @@
 %h1 Welcome to my wiki clone
 
-= link_to "New Article", new_article_path
+- if user_signed_in?
+	= link_to "New Article", new_article_path
+- else
+	= link_to "Sign Up Here!", new_user_registration_path
 
 %br
 
