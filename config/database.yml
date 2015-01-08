@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
-  password:
+  username: site_dummy
+  password: rootforme
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: wiki_clone_development
+  database: wiki_clone_developement
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
